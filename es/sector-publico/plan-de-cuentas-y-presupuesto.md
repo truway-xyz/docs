@@ -5,7 +5,7 @@ cada una en su lugar.
 
 | Clasificación | Quién la usa | En Truway | Estado |
 |---|---|---|---|
-| **PUC** (Plan Único de Cuentas) | Empresas; las ESAL lo usan como catálogo de referencia | Cada rubro y cada gasto llevan una cuenta del PUC, por ejemplo `5135` | Catálogo base de cuentas de cuatro dígitos; las subcuentas de seis y ocho dígitos se aceptan bajo su cuenta. Pendiente la revisión de un contador público |
+| **PUC** (Plan Único de Cuentas) | Empresas; las ESAL lo usan como catálogo de referencia | Cada rubro y cada gasto llevan una cuenta del PUC, por ejemplo `5135` | Catálogo base de cuentas de cuatro dígitos, validado por un contador público (noviembre de 2026); las subcuentas de seis y ocho dígitos se aceptan bajo su cuenta |
 | **Catálogo General de Cuentas** de la Contaduría General de la Nación | Entidades públicas | Reservado | En la hoja de ruta: cuando una entidad registre directamente |
 | **Clasificación presupuestal** y **rubros del plan de inversión** del contrato | La entidad (presupuesto) y el supervisor (contrato) | El rubro del expediente es el rubro del plan de inversión | En testnet. Relación con el código presupuestal oficial: en diseño |
 | **Fuente de financiación** | La entidad | Cada rubro tiene una fuente; el dinero de una fuente nunca paga el rubro de otra | En testnet |

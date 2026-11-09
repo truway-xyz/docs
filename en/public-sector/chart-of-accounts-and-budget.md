@@ -5,7 +5,7 @@ keeps each one in its place.
 
 | Classification | Who uses it | In Truway | Status |
 |---|---|---|---|
-| **PUC** (Plan Único de Cuentas) | Companies; non-profits use it as their reference catalogue | Each budget line and expense carries a PUC account, e.g. `5135` | Base catalogue of four-digit accounts; six- and eight-digit sub-accounts accepted under their account. Pending review by a public accountant |
+| **PUC** (Plan Único de Cuentas) | Companies; non-profits use it as their reference catalogue | Each budget line and expense carries a PUC account, e.g. `5135` | Base catalogue of four-digit accounts, validated by a public accountant (November 2026); six- and eight-digit sub-accounts accepted under their account |
 | **General Catalogue of Accounts** of the General Accounting Office | Government agencies | Reserved | Roadmap: when an agency records directly |
 | **Budget classification** and the **budget lines of the contract's investment plan** | The agency (budget) and the supervisor (contract) | The budget line of the file is the line of the investment plan | Live on testnet. Mapping to the official budget code: design |
 | **Funding source** | The agency | Each budget line has one source; one source's money never pays another's line | Live on testnet |
