@@ -1,0 +1,22 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+# One site, two language variants. GitBook's free plan has no site sections, so the four parts
+# (About, Public sector, Proof of Spend, Architecture) are groups in each SUMMARY.md. If the site
+# moves to a plan with sections, each group becomes a section without moving any file.
+site:
+  title: Truway Docs
+  structure:
+    - type: space
+      key: truway-docs-es
+      title: Español
+      path: es
+      default: true
+      content:
+        directory: ./es
+        language: es
+    - type: space
+      key: truway-docs-en
+      title: English
+      path: en
+      content:
+        directory: ./en
+        language: en
