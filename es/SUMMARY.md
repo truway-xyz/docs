@@ -1,4 +1,4 @@
-# Tabla de contenido
+# Table of contents
 
 * [Bienvenido a Truway](README.md)
 
@@ -32,7 +32,7 @@
 
 ## Proof of Spend
 
-* [Proof of Spend](proof-of-spend/README.md)
+* [Proof of Spend](proof-of-spend/proof-of-spend.md)
 * [Especificación](proof-of-spend/especificacion.md)
 * [Leer el registro](proof-of-spend/leer-el-registro.md)
 * [Implementar el estándar](proof-of-spend/implementar.md)

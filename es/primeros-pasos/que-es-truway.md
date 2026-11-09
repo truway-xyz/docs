@@ -1,11 +1,13 @@
 ---
-description: "Qué hace Truway, para quién es y qué incluye."
+description: Qué hace Truway, para quién es y qué incluye.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -15,6 +17,14 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -28,12 +38,12 @@ Truway está en beta. La app funciona en un entorno de pruebas y los programas q
 
 ## Quién la usa
 
-| Quién | Qué hace en Truway |
-|---|---|
+| Quién                                                   | Qué hace en Truway                                                           |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **Organización ejecutora** (ESAL, federación, operador) | Carga el presupuesto, entrega anticipos y registra cada gasto con su factura |
-| **Entidad pública** | Aprueba rubros y gastos a través del supervisor del contrato |
-| **Equipo de campo** | Manda la foto de cada recibo por WhatsApp |
-| **Veedurías, concejos, contralorías y ciudadanos** | Consultan el expediente público y verifican cualquier gasto |
+| **Entidad pública**                                     | Aprueba rubros y gastos a través del supervisor del contrato                 |
+| **Equipo de campo**                                     | Manda la foto de cada recibo por WhatsApp                                    |
+| **Veedurías, concejos, contralorías y ciudadanos**      | Consultan el expediente público y verifican cualquier gasto                  |
 
 ## Qué incluye
 
@@ -47,7 +57,7 @@ Truway está en beta. La app funciona en un entorno de pruebas y los programas q
 
 ## Cómo se diferencia
 
-Cada gasto aprobado queda en un registro público que no controla Truway, ni la entidad, ni la organización. El registro sigue [Proof of Spend](../proof-of-spend/README.md), un estándar abierto, así que cualquier sistema puede leerlo sin depender de Truway.
+Cada gasto aprobado queda en un registro público que no controla Truway, ni la entidad, ni la organización. El registro sigue [Proof of Spend](../proof-of-spend/proof-of-spend.md), un estándar abierto, así que cualquier sistema puede leerlo sin depender de Truway.
 
 ## Siguiente paso
 
