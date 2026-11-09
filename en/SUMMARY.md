@@ -32,7 +32,7 @@
 
 ## Proof of Spend
 
-* [Proof of Spend](proof-of-spend/README.md)
+* [Proof of Spend](proof-of-spend/proof-of-spend.md)
 * [Specification](proof-of-spend/specification.md)
 * [Reading the record](proof-of-spend/reading-the-record.md)
 * [Implementing the standard](proof-of-spend/implementing.md)

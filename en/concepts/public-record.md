@@ -1,11 +1,13 @@
 ---
-description: "What the public record keeps, what it proves and what it does not."
+description: What the public record keeps, what it proves and what it does not.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -16,6 +18,14 @@ layout:
     visible: true
   pagination:
     visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Public record
@@ -24,15 +34,15 @@ Every approved allocation and expense lands on a public record. Nobody can chang
 
 ## What each expense keeps
 
-| Field | Example |
-|---|---|
-| Code | `PAY-2026-0004` |
-| Program, budget line and funder | Scholarships · Study materials · Departmental fund |
-| Account code | PUC 5195 Miscellaneous |
-| Amount and currency | 38,500 COP |
-| Who recorded it and who approved it | Two different people |
-| Invoice fingerprint | A code computed from the file |
-| Date | When it was approved |
+| Field                               | Example                                            |
+| ----------------------------------- | -------------------------------------------------- |
+| Code                                | `PAY-2026-0004`                                    |
+| Program, budget line and funder     | Scholarships · Study materials · Departmental fund |
+| Account code                        | PUC 5195 Miscellaneous                             |
+| Amount and currency                 | 38,500 COP                                         |
+| Who recorded it and who approved it | Two different people                               |
+| Invoice fingerprint                 | A code computed from the file                      |
+| Date                                | When it was approved                               |
 
 ## The invoice fingerprint
 
@@ -42,12 +52,12 @@ To check an invoice, drop it on the expense page: your browser computes its fing
 
 ## What it proves and what it does not
 
-| Proves | Does not prove |
-|---|---|
-| That this exact file is the one that was approved | That the invoice is genuine |
-| That two different people recorded and approved it | Who those people are: the organization knows |
-| That it fits within the approved budget line | That the bank or cash payment happened: that evidence stays with the organization and its auditors |
-| That the file backs no other expense of the organization | That another organization did not use it |
+| Proves                                                   | Does not prove                                                                                     |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| That this exact file is the one that was approved        | That the invoice is genuine                                                                        |
+| That two different people recorded and approved it       | Who those people are: the organization knows                                                       |
+| That it fits within the approved budget line             | That the bank or cash payment happened: that evidence stays with the organization and its auditors |
+| That the file backs no other expense of the organization | That another organization did not use it                                                           |
 
 {% hint style="info" %}
 The fingerprint belongs to the file, not the invoice: another photo of the same paper invoice has a different fingerprint. Checking invoices across organizations by their CUFE is on the [roadmap](../about/roadmap.md).
@@ -55,4 +65,4 @@ The fingerprint belongs to the file, not the invoice: another photo of the same 
 
 ## An open standard
 
-The record follows [Proof of Spend](../proof-of-spend/README.md). Any system can read it and build the execution report or the general ledger without Truway.
+The record follows [Proof of Spend](../proof-of-spend/proof-of-spend.md). Any system can read it and build the execution report or the general ledger without Truway.

@@ -1,11 +1,13 @@
 ---
-description: "Reference for budget-treasury, the reference implementation of Proof of Spend."
+description: Reference for budget-treasury, the reference implementation of Proof of Spend.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -16,50 +18,58 @@ layout:
     visible: true
   pagination:
     visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # budget-treasury
 
-Soroban contract that implements [Proof of Spend](../proof-of-spend/README.md). One instance is deployed per organization.
+Soroban contract that implements [Proof of Spend](../proof-of-spend/proof-of-spend.md). One instance is deployed per organization.
 
-| | |
-|---|---|
-| Version | `0.4.0` |
-| Source | [`contracts/budget-treasury`](https://github.com/truway-xyz/soroban-contracts/tree/main/contracts/budget-treasury) |
-| Toolchain | Rust 1.96.0 · `soroban-sdk` 29.0.1 (protocol 29) · `wasm32v1-none` · Stellar CLI 27 |
-| Contract meta | `event_schema = proof-of-spend/1` |
-| License | Apache-2.0 |
+|               |                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Version       | `0.4.0`                                                                                                            |
+| Source        | [`contracts/budget-treasury`](https://github.com/truway-xyz/soroban-contracts/tree/main/contracts/budget-treasury) |
+| Toolchain     | Rust 1.96.0 · `soroban-sdk` 29.0.1 (protocol 29) · `wasm32v1-none` · Stellar CLI 27                                |
+| Contract meta | `event_schema = proof-of-spend/1`                                                                                  |
+| License       | Apache-2.0                                                                                                         |
 
 ## Data model
 
 <figure><img src="../.gitbook/assets/data-model.svg" alt="A treasury holds its token, members and proposal counter; it contains budget lines per project, line and source, funds per project and source, and proposals; each proposal may use a supporting document."><figcaption><p>Contract entities</p></figcaption></figure>
 
-| Key | Storage | Value |
-|---|---|---|
-| `Token`, `TokenSymbol`, `Members`, `NextId` | Instance | Read by most calls |
-| `Proposal(id)` | Persistent | One per proposal |
-| `Line(LineKey)` | Persistent | One per project, line and source |
-| `Funds(FundKey)` | Persistent | One per project and source |
-| `Receipt(hash)` | Persistent | The proposal that used the document |
+| Key                                         | Storage    | Value                               |
+| ------------------------------------------- | ---------- | ----------------------------------- |
+| `Token`, `TokenSymbol`, `Members`, `NextId` | Instance   | Read by most calls                  |
+| `Proposal(id)`                              | Persistent | One per proposal                    |
+| `Line(LineKey)`                             | Persistent | One per project, line and source    |
+| `Funds(FundKey)`                            | Persistent | One per project and source          |
+| `Receipt(hash)`                             | Persistent | The proposal that used the document |
 
 ## Roles
 
-| Role | Can propose | Can approve or reject |
-|---|---|---|
-| `Admin` | Anything | Any proposal of another member |
-| `Approver` | Nothing | Budgets, expenses and payments |
-| `Operator` | Expenses and payments | Nothing |
+| Role       | Can propose           | Can approve or reject          |
+| ---------- | --------------------- | ------------------------------ |
+| `Admin`    | Anything              | Any proposal of another member |
+| `Approver` | Nothing               | Budgets, expenses and payments |
+| `Operator` | Expenses and payments | Nothing                        |
 
 ## Actions
 
-| Action | What it does | Moves funds |
-|---|---|---|
-| `SetBudget(BudgetChange)` | Creates or changes a line with `chart`, `account`, `currency` and amount | No |
-| `RecordExpense(Expense)` | Records an expense paid off the ledger with `receipt_hash`, `payment_ref` and `payee_ref` | No |
-| `Pay(Payment)` | Pays from the contract's funds to an address | Yes |
-| `AddMember(MemberChange)` | Adds a member or changes their role | No |
-| `RemoveMember(Address)` | Removes a member | No |
-| `Upgrade(BytesN<32>)` | Replaces the code | No |
+| Action                    | What it does                                                                              | Moves funds |
+| ------------------------- | ----------------------------------------------------------------------------------------- | ----------- |
+| `SetBudget(BudgetChange)` | Creates or changes a line with `chart`, `account`, `currency` and amount                  | No          |
+| `RecordExpense(Expense)`  | Records an expense paid off the ledger with `receipt_hash`, `payment_ref` and `payee_ref` | No          |
+| `Pay(Payment)`            | Pays from the contract's funds to an address                                              | Yes         |
+| `AddMember(MemberChange)` | Adds a member or changes their role                                                       | No          |
+| `RemoveMember(Address)`   | Removes a member                                                                          | No          |
+| `Upgrade(BytesN<32>)`     | Replaces the code                                                                         | No          |
 
 ## Interface
 

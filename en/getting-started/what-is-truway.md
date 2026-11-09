@@ -1,11 +1,13 @@
 ---
-description: "What Truway does, who it is for and what it includes."
+description: What Truway does, who it is for and what it includes.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -15,6 +17,14 @@ layout:
   outline:
     visible: true
   pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
     visible: true
 ---
 
@@ -28,12 +38,12 @@ Truway is in beta. The app runs in a test environment and the programs you see a
 
 ## Who uses it
 
-| Who | What they do in Truway |
-|---|---|
+| Who                                                           | What they do in Truway                                                            |
+| ------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | **Executing organization** (non-profit, federation, operator) | Loads the budget, gives field advances and records every expense with its invoice |
-| **Government agency** | Approves budget lines and expenses through the contract supervisor |
-| **Field team** | Sends a photo of each receipt over WhatsApp |
-| **Oversight groups, councils, comptrollers and citizens** | Read the public program file and verify any expense |
+| **Government agency**                                         | Approves budget lines and expenses through the contract supervisor                |
+| **Field team**                                                | Sends a photo of each receipt over WhatsApp                                       |
+| **Oversight groups, councils, comptrollers and citizens**     | Read the public program file and verify any expense                               |
 
 ## What it includes
 
@@ -47,7 +57,7 @@ Truway is in beta. The app runs in a test environment and the programs you see a
 
 ## What sets it apart
 
-Every approved expense lands on a public record that neither Truway, nor the agency, nor the organization controls. The record follows [Proof of Spend](../proof-of-spend/README.md), an open standard, so any system can read it without Truway.
+Every approved expense lands on a public record that neither Truway, nor the agency, nor the organization controls. The record follows [Proof of Spend](../proof-of-spend/proof-of-spend.md), an open standard, so any system can read it without Truway.
 
 ## Next
 
