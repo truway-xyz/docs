@@ -1,10 +1,4 @@
 $schema: https://api.gitbook.com/gitbook-docs.yaml
-# One site, two language variants. GitBook's free plan has no site sections, so the four parts
-# (About, Public sector, Proof of Spend, Architecture) are groups in each SUMMARY.md. If the site
-# moves to a plan with sections, each group becomes a section without moving any file.
-#
-# Keys are how GitBook matches each entry to an existing space between syncs: never change them.
-# space-2 and space-3 are the spaces this site already had; they now hold the new content.
 site:
   title: Truway Docs
   structure:
