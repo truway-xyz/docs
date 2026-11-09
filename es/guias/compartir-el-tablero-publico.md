@@ -1,5 +1,5 @@
 ---
-icon: chart-column
+icon: arrow-up-right-from-square
 description: "Comparte la ejecución del programa y descarga el libro diario."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

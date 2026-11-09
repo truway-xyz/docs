@@ -1,5 +1,5 @@
 ---
-icon: hand-holding-dollar
+icon: money-bill
 description: "Give a petty cash advance from a budget line to a field team."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

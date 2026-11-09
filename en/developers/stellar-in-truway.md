@@ -1,5 +1,5 @@
 ---
-icon: star
+icon: globe
 description: "What Stellar brings to Truway and what does not move on Stellar."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

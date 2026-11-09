@@ -1,5 +1,5 @@
 ---
-icon: diagram-project
+icon: layer-group
 description: "How a contract moves through Truway, from budget to report."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

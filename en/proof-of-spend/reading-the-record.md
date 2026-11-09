@@ -1,5 +1,5 @@
 ---
-icon: book-open
+icon: clipboard-check
 description: "Build the execution report and the general ledger from the events."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

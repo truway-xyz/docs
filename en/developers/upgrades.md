@@ -1,5 +1,5 @@
 ---
-icon: arrow-up-from-bracket
+icon: arrows-rotate
 description: "How a treasury's code is upgraded and what is missing before mainnet."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

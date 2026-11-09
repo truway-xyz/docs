@@ -1,5 +1,5 @@
 ---
-icon: rocket
+icon: arrow-right
 description: "Create a program, give a field advance and record your first verifiable expense."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

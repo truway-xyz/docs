@@ -1,5 +1,5 @@
 ---
-icon: square-plus
+icon: plus
 description: "Crea un programa, tus equipos de campo e invita a las personas que aprueban."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

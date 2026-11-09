@@ -1,5 +1,5 @@
 ---
-icon: arrow-up-from-bracket
+icon: arrows-rotate
 description: "Cómo se actualiza el código de una tesorería y qué falta antes de mainnet."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

@@ -1,5 +1,5 @@
 ---
-icon: user-check
+icon: users
 description: "Quién puede hacer qué en una organización, y la regla de las dos personas."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

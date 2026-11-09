@@ -1,5 +1,5 @@
 ---
-icon: arrows-rotate
+icon: clock-rotate-left
 description: "Cómo viaja un gasto desde WhatsApp hasta el ledger, y los estados de una propuesta."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

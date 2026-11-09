@@ -1,5 +1,5 @@
 ---
-icon: file-contract
+icon: file-code
 description: >-
   Referencia del contrato budget-treasury, implementación de referencia de Proof
   of Spend.

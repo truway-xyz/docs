@@ -1,5 +1,5 @@
 ---
-icon: file-contract
+icon: file-code
 description: Reference for budget-treasury, the reference implementation of Proof of Spend.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

@@ -1,5 +1,5 @@
 ---
-icon: badge-check
+icon: receipt
 description: "El estándar abierto de ejecución presupuestal sobre Stellar que implementa Truway."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

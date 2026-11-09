@@ -1,5 +1,5 @@
 ---
-icon: book-open
+icon: clipboard-check
 description: "Arma el informe de ejecución y el libro diario a partir de los eventos."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
