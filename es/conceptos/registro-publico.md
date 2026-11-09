@@ -1,4 +1,5 @@
 ---
+icon: shield-check
 description: Qué queda en el registro público, qué prueba y qué no.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

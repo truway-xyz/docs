@@ -1,4 +1,5 @@
 ---
+icon: house
 description: >-
   Truway documentation for executing organizations, government agencies and
   developers.
@@ -33,12 +34,6 @@ layout:
 # Welcome to Truway
 
 Truway puts the execution of a public contract on a record anyone can check. Every expense carries its budget line, its account code, its invoice and the approval of two people.
-
-{% hint style="info" %}
-Truway is in beta. The app runs in a test environment and the programs you see are demo data.
-{% endhint %}
-
-<figure><img src=".gitbook/assets/how-it-works.svg" alt="A contract is split into budget lines with account codes. Each field advance and each expense is approved by a second person and lands on the public record, which produces the report per line and the general ledger."><figcaption><p>From contract to report, with two approvals at every step</p></figcaption></figure>
 
 ## Start here
 

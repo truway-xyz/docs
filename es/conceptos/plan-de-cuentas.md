@@ -1,4 +1,5 @@
 ---
+icon: book
 description: "Cómo se asienta cada rubro y cada gasto en el plan de cuentas."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

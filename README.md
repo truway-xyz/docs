@@ -30,15 +30,22 @@ matches them between syncs: never change them.
 
 ### Diagrams
 
-Diagrams are written in Mermaid under `diagrams/<lang>/` and rendered to SVG in
-`<lang>/.gitbook/assets/` with Truway's palette (`diagrams/mermaid.json`). Edit the `.mmd` file,
-then render:
+Seven diagrams per language, drawn in draw.io with Truway's palette:
 
-```bash
-scripts/render-diagrams.sh          # needs Node and Chrome
-```
+| Diagram | Notation | Page |
+|---|---|---|
+| System context | C4, level 1 | Architecture |
+| Components | UML component diagram | Architecture |
+| Stellar architecture | Contracts, accounts and integrations on Stellar | Architecture, Stellar in Truway |
+| Expense sequence | UML sequence | Lifecycle of an expense |
+| Signing sequence | UML sequence | Signing and fees |
+| Contract classes | UML class diagram | budget-treasury |
+| Deployment | UML deployment diagram | Deployment |
 
-Every image carries alt text that describes the whole diagram.
+The `.drawio` files in `diagrams/drawio/<lang>/` are the source; open them in draw.io to edit.
+`scripts/drawio_build.py` regenerates them from code, and `scripts/render-diagrams.sh` exports
+them to PNG in `<lang>/.gitbook/assets/` (PNG because GitBook drops the text of SVGs with HTML
+labels). Every image carries alt text that describes the whole diagram.
 
 ### Generated pages
 

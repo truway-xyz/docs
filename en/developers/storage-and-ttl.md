@@ -1,4 +1,5 @@
 ---
+icon: database
 description: "TTL policy, archival and restoration of contract entries."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

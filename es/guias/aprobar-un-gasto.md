@@ -1,4 +1,5 @@
 ---
+icon: circle-check
 description: "Revisa y aprueba o rechaza los gastos de tu organización."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

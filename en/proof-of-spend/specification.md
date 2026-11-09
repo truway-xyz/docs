@@ -1,4 +1,5 @@
 ---
+icon: file-lines
 description: "The normative Proof of Spend specification."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

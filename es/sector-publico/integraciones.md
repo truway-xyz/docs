@@ -1,4 +1,5 @@
 ---
+icon: plug
 description: "Con qué sistemas del Estado y herramientas se conecta Truway."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Integraciones con el Estado
 
 Truway cubre la ejecución del contrato. Lee la información que ya existe, exporta a las herramientas de la organización y publica el expediente. Nunca escribe en un sistema del Estado.
-
-<figure><img src="../.gitbook/assets/integraciones.svg" alt="Truway lee la factura electrónica y los recibos por WhatsApp, y próximamente SECOP II y los comprobantes bancarios; exporta el libro diario al software contable y publica el expediente; próximamente exportará a contabilidad pública y contralorías."><figcaption><p>Integraciones disponibles y próximas</p></figcaption></figure>
 
 | Sistema | Qué hace Truway | Disponibilidad |
 |---|---|---|

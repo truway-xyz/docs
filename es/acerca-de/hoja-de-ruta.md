@@ -1,4 +1,5 @@
 ---
+icon: map
 description: "Lo que viene en Truway."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

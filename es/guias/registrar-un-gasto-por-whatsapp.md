@@ -1,4 +1,5 @@
 ---
+icon: message
 description: "Legaliza una compra de campo con la foto del recibo."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

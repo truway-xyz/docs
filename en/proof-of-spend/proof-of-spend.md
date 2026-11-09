@@ -1,4 +1,5 @@
 ---
+icon: badge-check
 description: "The open standard for budget execution on Stellar that Truway implements."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -31,8 +32,6 @@ Proof of Spend (`proof-of-spend/1`) is an open standard for budget execution on 
 | License | Apache-2.0 |
 | Reference implementation | [`budget-treasury`](../developers/budget-treasury.md) |
 | Source | [`soroban-contracts/docs/proof-of-spend.md`](https://github.com/truway-xyz/soroban-contracts/blob/main/docs/proof-of-spend.md) |
-
-<figure><img src="../.gitbook/assets/events-to-reports.svg" alt="The budget_set, expense_recorded, payment_executed and project_funded events of budget-treasury feed the budget and spending per line and source, the report per funder and the general ledger."><figcaption><p>From events to reports</p></figcaption></figure>
 
 ## Scope
 

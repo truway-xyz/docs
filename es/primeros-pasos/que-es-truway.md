@@ -1,4 +1,5 @@
 ---
+icon: circle-info
 description: Qué hace Truway, para quién es y qué incluye.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -31,10 +32,6 @@ layout:
 # Qué es Truway
 
 Truway es la plataforma para ejecutar y rendir cuentas de dinero público. La usan las organizaciones que ejecutan contratos o convenios con el Estado, la entidad que los supervisa y cualquier persona que quiera comprobar en qué se gastó.
-
-{% hint style="info" %}
-Truway está en beta. La app funciona en un entorno de pruebas y los programas que verás son de demostración.
-{% endhint %}
 
 ## Quién la usa
 

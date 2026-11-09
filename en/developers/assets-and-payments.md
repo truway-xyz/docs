@@ -1,4 +1,5 @@
 ---
+icon: coins
 description: "The treasury asset, payments on the ledger and rails to pesos."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -19,8 +20,6 @@ layout:
 ---
 
 # Assets and payments
-
-<figure><img src="../.gitbook/assets/rails.svg" alt="Today public money moves in pesos from the agency to the organization and the supplier by bank or cash, and the receipt is recorded with RecordExpense. On the roadmap, a funder funds the treasury in USDC, the advance goes out through the Stellar Disbursement Platform to the team lead, and an anchor converts it to pesos."><figcaption><p>Today and on the roadmap</p></figcaption></figure>
 
 ## The treasury asset
 

@@ -1,4 +1,5 @@
 ---
+icon: terminal
 description: "Verify a record directly on the ledger with the Stellar CLI."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Verify a record
 
 This guide verifies a record without Truway. For verification in the browser, see [Verify an expense](../guides/verify-an-expense.md).
-
-<figure><img src="../.gitbook/assets/verify-record.svg" alt="Check the contract meta, the WASM hash against the release, the event with getEvents, the document fingerprint against receipt_hash, receipt_use and the proposal."><figcaption><p>Verification steps</p></figcaption></figure>
 
 ## 1. The contract
 

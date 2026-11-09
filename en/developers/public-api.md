@@ -1,4 +1,5 @@
 ---
+icon: brackets-curly
 description: "Public read endpoints, no authentication."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

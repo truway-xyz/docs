@@ -1,4 +1,5 @@
 ---
+icon: lock
 description: "Qué datos guarda Truway, dónde, quién los ve y por cuánto tiempo."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

@@ -1,4 +1,5 @@
 ---
+icon: plug
 description: "Which government systems and tools Truway connects to."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Government integrations
 
 Truway covers contract execution. It reads information that already exists, exports to the organization's tools and publishes the program file. It never writes into a government system.
-
-<figure><img src="../.gitbook/assets/integrations.svg" alt="Truway reads electronic invoices and WhatsApp receipts, and soon SECOP II and bank receipts; it exports the general ledger to accounting software and publishes the program file; soon it will export to public accounting and comptrollers."><figcaption><p>Available and upcoming integrations</p></figcaption></figure>
 
 | System | What Truway does | Availability |
 |---|---|---|

@@ -1,4 +1,5 @@
 ---
+icon: arrows-rotate
 description: "How an expense travels from WhatsApp to the ledger, and the states of a proposal."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -22,7 +23,7 @@ layout:
 
 ## Expense paid by bank or cash
 
-<figure><img src="../.gitbook/assets/expense-flow.svg" alt="The team lead sends the photo over WhatsApp; the API stores the file, computes its SHA-256 and AI reads the fields; the lead picks the budget line; the API sends propose(RecordExpense); the approver approves; the contract checks everything and emits expense_recorded and proposal_executed; the indexer stores the events."><figcaption><p>From receipt photo to ledger event</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/expense-sequence.png" alt="Sequence diagram. The team lead sends the photo over WhatsApp, the API stores the file and its SHA-256, AI reads the fields, the lead picks the budget line, the API sends propose(RecordExpense) signed by the lead, the approver approves, the API sends approve signed by the approver, the contract checks the rules and emits expense_recorded and proposal_executed, and the indexer stores the events."><figcaption><p>Sequence of an expense on Stellar</p></figcaption></figure>
 
 1. The team pays and captures the receipt. The platform stores the file and computes its SHA-256.
 2. `RecordExpense` is proposed with the line, source, amount, account, `receipt_hash` and hashed references to the payment and the payee.
@@ -35,8 +36,6 @@ On testnet, each person's step is signed by a demo signer held by the platform. 
 {% endhint %}
 
 ## Proposal states
-
-<figure><img src="../.gitbook/assets/proposal-states.svg" alt="A proposal starts as Pending; it becomes Executed when another member approves it, or Rejected if it is rejected."><figcaption><p>State machine</p></figcaption></figure>
 
 | Contract state | App status |
 |---|---|

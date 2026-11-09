@@ -1,4 +1,5 @@
 ---
+icon: square-plus
 description: "Create a program and its field teams, and invite the people who approve."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

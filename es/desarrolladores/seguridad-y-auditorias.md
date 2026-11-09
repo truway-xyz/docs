@@ -1,4 +1,5 @@
 ---
+icon: user-shield
 description: "Revisiones de seguridad, hallazgos y cómo reportar una vulnerabilidad."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

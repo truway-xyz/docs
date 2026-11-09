@@ -1,4 +1,5 @@
 ---
+icon: code
 description: "Conformance checklist to implement Proof of Spend in another contract or system."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

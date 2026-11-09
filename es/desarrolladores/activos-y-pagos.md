@@ -1,4 +1,5 @@
 ---
+icon: coins
 description: "El activo de la tesorería, los pagos en la red y los rieles a pesos."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -19,8 +20,6 @@ layout:
 ---
 
 # Activos y pagos
-
-<figure><img src="../.gitbook/assets/rieles.svg" alt="Hoy el dinero público va en pesos de la entidad a la organización y al proveedor por banco o efectivo, y el comprobante se registra con RecordExpense. En la hoja de ruta, un financiador fondea la tesorería en USDC, el anticipo sale por la Stellar Disbursement Platform a la líder del equipo y un anchor lo convierte a pesos."><figcaption><p>Hoy y en la hoja de ruta</p></figcaption></figure>
 
 ## El activo de la tesorería
 

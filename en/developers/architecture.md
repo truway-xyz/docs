@@ -1,4 +1,5 @@
 ---
+icon: sitemap
 description: "Truway's components, who controls each one and what lives on the ledger."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -22,17 +23,13 @@ layout:
 
 Members of each organization propose and approve in their own `budget-treasury` contract on Stellar. The Truway platform builds those transactions, stores documents and indexes events. Anyone can read the result.
 
-## Technical documentation map
-
-<figure><img src="../.gitbook/assets/docs-map.svg" alt="Map of the technical documentation: Proof of Spend, architecture, contract, signing and security, and data."><figcaption></figcaption></figure>
-
 ## Context
 
-<figure><img src="../.gitbook/assets/context.svg" alt="Supervisor, coordinator and field team use the app and WhatsApp; the Truway API sends to budget-treasury the steps each member signs; events land on the public ledger, read by Truway's indexer and by any third-party explorer."><figcaption><p>People, Truway and Stellar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c4-context.png" alt="C4 context diagram. Supervisor, coordinator, field team and oversight groups use Truway. Truway sends signed proposals and approvals to Stellar and reads its events, receives WhatsApp Business messages, uses Privy for sessions and signing, Google Gemini to read invoices, and will read contracts from SECOP II."><figcaption><p>System context (C4, level 1)</p></figcaption></figure>
 
 ## Components
 
-<figure><img src="../.gitbook/assets/components.svg" alt="The web app and WhatsApp reach the Truway API, with identity, programs, capture, treasury, public API and indexer modules; the API uses PostgreSQL, Redis and document storage, and talks to budget-treasury through Stellar RPC."><figcaption><p>Platform components</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/components.png" alt="UML component diagram. The web app has the dashboard, the public explorer and the Privy signer. The API has identity, programs, public proof, document storage, WhatsApp capture, invoice reading with Gemini, treasury, Soroban client and indexer. The Soroban client uses the bindings to reach Stellar RPC and budget-treasury; data goes to PostgreSQL, Redis and object storage."><figcaption><p>Components (UML)</p></figcaption></figure>
 
 | Layer | What it does | Who controls it |
 |---|---|---|

@@ -1,4 +1,5 @@
 ---
+icon: sitemap
 description: "Componentes de Truway, quién controla cada uno y qué vive en la red."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -22,17 +23,13 @@ layout:
 
 Los miembros de cada organización proponen y aprueban en su propio contrato `budget-treasury` en Stellar. La plataforma de Truway arma esas transacciones, guarda los documentos e indexa los eventos. Cualquiera puede leer el resultado.
 
-## Mapa de la documentación técnica
-
-<figure><img src="../.gitbook/assets/mapa-documentacion.svg" alt="Mapa de la documentación técnica: Proof of Spend, arquitectura, contrato, firma y seguridad, y datos."><figcaption></figcaption></figure>
-
 ## Contexto
 
-<figure><img src="../.gitbook/assets/contexto.svg" alt="Supervisor, coordinador y equipo de campo usan la app y WhatsApp; la API de Truway envía a budget-treasury los pasos que firma cada miembro; los eventos quedan en el ledger público, que lee el indexador de Truway y cualquier explorador de terceros."><figcaption><p>Personas, Truway y Stellar</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/c4-contexto.png" alt="Diagrama de contexto C4. Supervisor, coordinación, equipo de campo y veedor usan Truway. Truway envía propuestas y aprobaciones firmadas a Stellar y lee sus eventos, recibe mensajes de WhatsApp Business, usa Privy para la sesión y la firma, Google Gemini para leer facturas, y leerá contratos de SECOP II."><figcaption><p>Contexto del sistema (C4, nivel 1)</p></figcaption></figure>
 
 ## Componentes
 
-<figure><img src="../.gitbook/assets/componentes.svg" alt="La app web y WhatsApp llegan a la API de Truway, con módulos de identidad, programas, captura, tesorería, API pública e indexador; la API usa PostgreSQL, Redis y almacenamiento de soportes, y se comunica con budget-treasury a través del RPC de Stellar."><figcaption><p>Componentes de la plataforma</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/componentes.png" alt="Diagrama de componentes UML. La app web tiene panel, explorador público y firmante de Privy. La API tiene identidad, programas, prueba pública, almacenamiento, captura por WhatsApp, lectura de facturas con Gemini, tesorería, cliente Soroban e indexador. El cliente Soroban usa los bindings para hablar con el RPC de Stellar y con budget-treasury; los datos van a PostgreSQL, Redis y almacenamiento de objetos."><figcaption><p>Componentes (UML)</p></figcaption></figure>
 
 | Capa | Qué hace | Quién la controla |
 |---|---|---|
@@ -43,6 +40,10 @@ Los miembros de cada organización proponen y aprueban en su propio contrato `bu
 | **Eventos Proof of Spend** | La interfaz pública | Nadie: están en el ledger |
 
 `RecordExpense` registra un gasto pagado por banco o en efectivo y no mueve fondos. `Pay` paga desde fondos que tenga el contrato.
+
+## Arquitectura en Stellar
+
+<figure><img src="../.gitbook/assets/arquitectura-stellar.png" alt="Arquitectura en Stellar. Los miembros firman su entrada de autorización con Privy; la API envía la invocación firmada y la cuenta remitente de Truway paga la comisión a través del RPC. Cada organización tiene su instancia de budget-treasury, desplegada desde el WASM 0.4.0 por una cuenta de un solo uso; el WASM está atestado en un release de GitHub que leen Stellar Expert y Stellar Lab. Los contratos emiten eventos Proof of Spend al ledger, que lee el indexador y cualquier lector. Próximamente: USDC hacia la Stellar Disbursement Platform, un anchor a pesos y un registro compartido de soportes."><figcaption><p>Arquitectura en Stellar: contratos, cuentas e integraciones</p></figcaption></figure>
 
 ## Qué vive en la red y qué fuera
 

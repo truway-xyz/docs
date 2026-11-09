@@ -1,4 +1,5 @@
 ---
+icon: folder-tree
 description: "Cómo se organiza el presupuesto de un programa."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

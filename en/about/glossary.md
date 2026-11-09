@@ -1,4 +1,5 @@
 ---
+icon: spell-check
 description: "Truway terms and their technical equivalent."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

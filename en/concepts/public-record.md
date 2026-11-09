@@ -1,4 +1,5 @@
 ---
+icon: shield-check
 description: What the public record keeps, what it proves and what it does not.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

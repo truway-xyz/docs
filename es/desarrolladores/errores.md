@@ -1,4 +1,5 @@
 ---
+icon: triangle-exclamation
 description: "Códigos de error de budget-treasury."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

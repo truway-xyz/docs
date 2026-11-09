@@ -1,4 +1,5 @@
 ---
+icon: signature
 description: "How each person signs their own step and who pays the fees."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -28,7 +29,7 @@ On testnet, while per-person signing is being built, the platform holds demo sig
 
 ## Per-person signing
 
-<figure><img src="../.gitbook/assets/signing.svg" alt="The member presses Approve; the API simulates the transaction, takes the member's authorization entry, sets nonce and expiry and returns the hash; the browser signs it with Privy; the API checks the signature, simulates again and submits, paying the fee."><figcaption><p>Per-person signing with Privy (design)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/signing-sequence.png" alt="Signing sequence diagram. The member approves, the API simulates the transaction on RPC and receives the authorization entry, sets nonce and expiry and requests the signature; the browser signs with Privy; the API checks the signature and submits the transaction paying the fee; the contract checks require_auth and emits proposal_executed."><figcaption><p>Per-person signing sequence (design)</p></figcaption></figure>
 
 1. The member presses **Approve**.
 2. The API builds `approve(approver, id)`, simulates it and takes the member's authorization entry, with a nonce and an expiry of about 720 ledgers (roughly one hour).

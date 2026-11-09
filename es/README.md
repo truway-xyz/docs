@@ -1,4 +1,5 @@
 ---
+icon: house
 description: >-
   Documentación de Truway para organizaciones, entidades públicas y
   desarrolladores.
@@ -33,12 +34,6 @@ layout:
 # Bienvenido a Truway
 
 Truway lleva la ejecución de un contrato público a un registro que cualquiera puede consultar. Cada gasto queda con su rubro, su cuenta contable, su factura y la aprobación de dos personas.
-
-{% hint style="info" %}
-Truway está en beta. La app funciona en un entorno de pruebas y los programas que verás son de demostración.
-{% endhint %}
-
-<figure><img src=".gitbook/assets/como-funciona.svg" alt="Un contrato se divide en rubros con cuenta contable. Cada anticipo y cada gasto los aprueba una segunda persona y quedan en el registro público, de donde salen el informe por rubro y el libro diario."><figcaption><p>Del contrato al informe, con dos aprobaciones en cada paso</p></figcaption></figure>
 
 ## Empieza aquí
 

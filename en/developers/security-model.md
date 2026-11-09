@@ -1,4 +1,5 @@
 ---
+icon: shield-halved
 description: "What each party can and cannot do, and what a record proves."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

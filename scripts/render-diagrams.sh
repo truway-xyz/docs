@@ -1,23 +1,16 @@
 #!/usr/bin/env bash
-# Renders every diagrams/<lang>/*.mmd into <lang>/.gitbook/assets/<name>.svg with Truway's palette.
-# The .mmd files are the source; the SVGs are what the pages show. Never edit an SVG by hand.
+# Exports every diagrams/drawio/<lang>/*.drawio to <lang>/.gitbook/assets/<name>.png (2x, white background).
+# The .drawio files are the source: edit them in draw.io, or change scripts/drawio_build.py and run it.
+# PNG on purpose: GitBook drops the text of SVGs that use HTML labels.
 #
-# Usage: scripts/render-diagrams.sh
-# Needs Node and a Chrome or Chromium. Set PUPPETEER_EXECUTABLE_PATH if Chrome is elsewhere.
+# Usage: scripts/render-diagrams.sh          (needs draw.io desktop: brew install --cask drawio)
 set -euo pipefail
-
-MMDC="${MMDC:-npx -y @mermaid-js/mermaid-cli@11.4.2}"
-CHROME="${PUPPETEER_EXECUTABLE_PATH:-/Applications/Google Chrome.app/Contents/MacOS/Google Chrome}"
-PUP="$(mktemp)"
-printf '{ "executablePath": "%s", "args": ["--no-sandbox"] }' "$CHROME" > "$PUP"
-
-for lang in ${LANGS:-es en}; do
+DRAWIO="${DRAWIO:-/Applications/draw.io.app/Contents/MacOS/draw.io}"
+for lang in es en; do
   mkdir -p "$lang/.gitbook/assets"
-  for src in diagrams/$lang/*.mmd; do
-    name="$(basename "$src" .mmd)"
-    $MMDC -q -p "$PUP" -c diagrams/mermaid.json -b '#FFFFFF' -w 1200 \
-      -i "$src" -o "$lang/.gitbook/assets/$name.svg"
-    echo "rendered $lang/.gitbook/assets/$name.svg"
+  for src in diagrams/drawio/$lang/*.drawio; do
+    name="$(basename "$src" .drawio)"
+    "$DRAWIO" -x -f png -s 2 -b 24 -o "$lang/.gitbook/assets/$name.png" "$src" >/dev/null 2>&1
+    echo "exported $lang/.gitbook/assets/$name.png"
   done
 done
-rm -f "$PUP"

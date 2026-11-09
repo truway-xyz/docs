@@ -1,4 +1,5 @@
 ---
+icon: file-contract
 description: Reference for budget-treasury, the reference implementation of Proof of Spend.
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -42,7 +43,7 @@ Soroban contract that implements [Proof of Spend](../proof-of-spend/proof-of-spe
 
 ## Data model
 
-<figure><img src="../.gitbook/assets/data-model.svg" alt="A treasury holds its token, members and proposal counter; it contains budget lines per project, line and source, funds per project and source, and proposals; each proposal may use a supporting document."><figcaption><p>Contract entities</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/contract-classes.png" alt="UML class diagram of the contract. Treasury holds the token, members with their Role and the fund, propose, approve and reject functions; it contains BudgetLine with chart, account, currency, budget and paid, Funds per project and source, and Proposal with its Action and ProposalStatus; each Proposal may use a Receipt."><figcaption><p>Contract class diagram (UML)</p></figcaption></figure>
 
 | Key                                         | Storage    | Value                               |
 | ------------------------------------------- | ---------- | ----------------------------------- |

@@ -1,4 +1,5 @@
 ---
+icon: chart-column
 description: "Share the program's execution and download the general ledger."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

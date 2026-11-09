@@ -1,4 +1,5 @@
 ---
+icon: hand-holding-dollar
 description: "Entrega un anticipo de caja menor a un equipo de campo desde un rubro."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

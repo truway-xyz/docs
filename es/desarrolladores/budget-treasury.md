@@ -1,4 +1,5 @@
 ---
+icon: file-contract
 description: >-
   Referencia del contrato budget-treasury, implementación de referencia de Proof
   of Spend.
@@ -44,7 +45,7 @@ Contrato Soroban que implementa [Proof of Spend](../proof-of-spend/proof-of-spen
 
 ## Modelo de datos
 
-<figure><img src="../.gitbook/assets/modelo-datos.svg" alt="Una tesorería tiene token, miembros y contador de propuestas; contiene rubros por proyecto, rubro y fuente, fondos por proyecto y fuente, y propuestas; cada propuesta puede usar un soporte."><figcaption><p>Entidades del contrato</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/clases-contrato.png" alt="Diagrama de clases UML del contrato. Treasury tiene token, miembros con su Role y las funciones fund, propose, approve y reject; contiene BudgetLine con plan, cuenta, moneda, presupuesto y pagado, Funds por proyecto y fuente, y Proposal con su Action y ProposalStatus; cada Proposal puede usar un Receipt."><figcaption><p>Diagrama de clases del contrato (UML)</p></figcaption></figure>
 
 | Clave                                       | Almacenamiento | Valor                              |
 | ------------------------------------------- | -------------- | ---------------------------------- |

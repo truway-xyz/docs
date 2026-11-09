@@ -1,4 +1,5 @@
 ---
+icon: clock-rotate-left
 description: "Versiones del estándar, del contrato y de la plataforma."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

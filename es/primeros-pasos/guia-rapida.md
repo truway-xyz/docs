@@ -1,4 +1,5 @@
 ---
+icon: rocket
 description: "Crea un programa, entrega un anticipo y registra tu primer gasto verificable."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

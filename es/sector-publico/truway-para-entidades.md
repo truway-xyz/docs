@@ -1,4 +1,5 @@
 ---
+icon: landmark
 description: "Cómo participa una entidad pública y cómo funciona el piloto de 90 días."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

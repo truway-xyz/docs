@@ -1,4 +1,5 @@
 ---
+icon: diagram-project
 description: "How a contract moves through Truway, from budget to report."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # How it works
 
 A program in Truway is a contract or agreement. The money is split into budget lines, every movement is approved by a second person, and everything lands on the public record.
-
-<figure><img src="../.gitbook/assets/how-it-works.svg" alt="Contract, budget lines with account codes, approval, field advance, approval, purchase in the field with a WhatsApp receipt, expense filed, approval, public record and report."><figcaption><p>The path of a program</p></figcaption></figure>
 
 ## 1. Budget
 

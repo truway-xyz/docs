@@ -1,8 +1,0 @@
-stateDiagram-v2
-  direction LR
-  [*] --> Pending: propose
-  Pending --> Executed: approve<br/>another member
-  Pending --> Rejected: reject
-  Executed --> [*]
-  Rejected --> [*]
-  note right of Pending: Validated when proposed<br/>and again when approved

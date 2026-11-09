@@ -1,4 +1,5 @@
 ---
+icon: shield-halved
 description: "Qué puede y qué no puede hacer cada parte, y qué prueba un registro."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

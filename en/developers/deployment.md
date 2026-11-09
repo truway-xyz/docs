@@ -1,4 +1,5 @@
 ---
+icon: server
 description: "Where each part of Truway runs, and the contract instances."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -20,7 +21,7 @@ layout:
 
 # Deployment
 
-<figure><img src="../.gitbook/assets/deployment.svg" alt="Cloudflare DNS routes the website to Cloudflare Pages, the app to its Next.js server and the API to its NestJS server; the API uses managed PostgreSQL, Redis and object storage, Google Gemini and WhatsApp webhooks, and connects to Stellar RPC."><figcaption><p>Platform deployment</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/deployment.png" alt="UML deployment diagram. People's devices go through Cloudflare DNS to the website on Cloudflare Pages, the Next.js app server and the NestJS API server. The API uses managed PostgreSQL, Redis and object storage, Google Gemini and WhatsApp webhooks, and connects to Stellar testnet RPC, which invokes budget-treasury and the USDC contract."><figcaption><p>Deployment diagram (UML)</p></figcaption></figure>
 
 | Service | Address |
 |---|---|

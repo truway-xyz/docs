@@ -1,4 +1,5 @@
 ---
+icon: message
 description: "Account for a field purchase with a photo of the receipt."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

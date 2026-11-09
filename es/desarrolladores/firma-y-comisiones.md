@@ -1,4 +1,5 @@
 ---
+icon: signature
 description: "Cómo firma cada persona su paso y quién paga las comisiones."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -28,7 +29,7 @@ En testnet, mientras se construye la firma por persona, la plataforma custodia f
 
 ## Firma por persona
 
-<figure><img src="../.gitbook/assets/firma.svg" alt="El miembro presiona Aprobar; la API simula la transacción, toma la entrada de autorización del miembro, fija nonce y vencimiento y devuelve el hash; el navegador lo firma con Privy; la API verifica la firma, simula de nuevo y envía pagando la comisión."><figcaption><p>Firma por persona con Privy (diseño)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/secuencia-firma.png" alt="Diagrama de secuencia de la firma. El miembro aprueba, la API simula la transacción en el RPC y recibe la entrada de autorización, fija nonce y vencimiento y pide la firma; el navegador firma con Privy; la API verifica la firma y envía la transacción pagando la comisión; el contrato revisa require_auth y emite proposal_executed."><figcaption><p>Secuencia de la firma por persona (diseño)</p></figcaption></figure>
 
 1. El miembro presiona **Aprobar**.
 2. La API arma `approve(approver, id)`, la simula y toma la entrada de autorización del miembro, con *nonce* y un vencimiento de unas 720 ledgers (cerca de una hora).

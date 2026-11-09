@@ -1,4 +1,5 @@
 ---
+icon: arrows-rotate
 description: "Cómo viaja un gasto desde WhatsApp hasta el ledger, y los estados de una propuesta."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -22,7 +23,7 @@ layout:
 
 ## Gasto pagado por banco o en efectivo
 
-<figure><img src="../.gitbook/assets/flujo-gasto.svg" alt="La líder manda la foto por WhatsApp; la API guarda el archivo, calcula su SHA-256 y la IA lee los datos; la líder elige el rubro; la API envía propose(RecordExpense); el aprobador aprueba; el contrato revisa todo y emite expense_recorded y proposal_executed; el indexador guarda los eventos."><figcaption><p>De la foto del recibo al evento en el ledger</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/secuencia-gasto.png" alt="Diagrama de secuencia. La líder manda la foto por WhatsApp, la API guarda el archivo y su SHA-256, la IA lee los datos, la líder elige el rubro, la API envía propose(RecordExpense) firmado por la líder, el aprobador aprueba, la API envía approve firmado por el aprobador, el contrato revisa las reglas y emite expense_recorded y proposal_executed, y el indexador guarda los eventos."><figcaption><p>Secuencia de un gasto en Stellar</p></figcaption></figure>
 
 1. El equipo paga y captura el recibo. La plataforma guarda el archivo y calcula su SHA-256.
 2. Se propone `RecordExpense` con rubro, fuente, valor, cuenta, `receipt_hash` y la huella de las referencias del pago y del proveedor.
@@ -35,8 +36,6 @@ En testnet, los pasos de cada persona los firman firmantes de demostración cust
 {% endhint %}
 
 ## Estados de una propuesta
-
-<figure><img src="../.gitbook/assets/estados-propuesta.svg" alt="Una propuesta nace en Pending; pasa a Executed cuando otro miembro la aprueba, o a Rejected si la rechazan."><figcaption><p>Máquina de estados</p></figcaption></figure>
 
 | Estado en el contrato | Estado en la app |
 |---|---|

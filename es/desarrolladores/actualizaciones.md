@@ -1,4 +1,5 @@
 ---
+icon: arrow-up-from-bracket
 description: "Cómo se actualiza el código de una tesorería y qué falta antes de mainnet."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -19,8 +20,6 @@ layout:
 ---
 
 # Actualizaciones del contrato
-
-<figure><img src="../.gitbook/assets/actualizacion.svg" alt="Un administrador propone Upgrade con el hash del WASM, otro lo aprueba, el contrato emite contract_upgraded y después reemplaza su código, conservando el ID y el almacenamiento."><figcaption><p>Actualización con dos administradores</p></figcaption></figure>
 
 1. Se sube el nuevo WASM (`stellar contract upload`) y se obtiene su hash.
 2. Un administrador propone `Upgrade(wasm_hash)`.

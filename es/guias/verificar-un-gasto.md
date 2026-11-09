@@ -1,4 +1,5 @@
 ---
+icon: magnifying-glass
 description: "Comprueba un gasto y su factura sin cuenta y sin pedir permiso."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Verificar un gasto
 
 Cualquier persona puede verificar un gasto: veedurías, concejales, contralorías o ciudadanos. No necesitas cuenta.
-
-<figure><img src="../.gitbook/assets/verificar-gasto.svg" alt="Con el código del gasto abres la página de verificación; si tienes la factura la sueltas para comparar la huella, y si no, revisas rubro, cuenta y aprobadores. Desde ahí puedes ver el mismo registro fuera de Truway."><figcaption><p>Cómo se verifica un gasto</p></figcaption></figure>
 
 ## Pasos
 

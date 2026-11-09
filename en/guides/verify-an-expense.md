@@ -1,4 +1,5 @@
 ---
+icon: magnifying-glass
 description: "Check an expense and its invoice without an account and without asking anyone."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Verify an expense
 
 Anyone can verify an expense: oversight groups, council members, comptrollers or citizens. No account needed.
-
-<figure><img src="../.gitbook/assets/verify-expense.svg" alt="With the expense code you open the verification page; if you have the invoice you drop it to compare the fingerprint, otherwise you review the line, account and approvers. From there you can see the same record outside Truway."><figcaption><p>How an expense is verified</p></figcaption></figure>
 
 ## Steps
 

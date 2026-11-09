@@ -1,4 +1,5 @@
 ---
+icon: arrow-up-from-bracket
 description: "How a treasury's code is upgraded and what is missing before mainnet."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -19,8 +20,6 @@ layout:
 ---
 
 # Contract upgrades
-
-<figure><img src="../.gitbook/assets/upgrade.svg" alt="One admin proposes Upgrade with the WASM hash, another approves it, the contract emits contract_upgraded and then replaces its code, keeping its ID and storage."><figcaption><p>Upgrade with two admins</p></figcaption></figure>
 
 1. The new WASM is uploaded (`stellar contract upload`) and its hash obtained.
 2. An admin proposes `Upgrade(wasm_hash)`.

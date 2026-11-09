@@ -1,4 +1,5 @@
 ---
+icon: file-lines
 description: "Especificación normativa de Proof of Spend."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

@@ -1,4 +1,5 @@
 ---
+icon: star
 description: "What Stellar brings to Truway and what does not move on Stellar."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -29,6 +30,8 @@ layout:
 | Many small records at low cost | Low, predictable fees |
 | Records final in seconds | Ledgers close in about 5 seconds, with no reorganizations |
 | Dollars where cooperation money arrives | Circle's USDC, usable from contracts through its Stellar Asset Contract |
+
+<figure><img src="../.gitbook/assets/stellar-architecture.png" alt="Stellar architecture. Members sign their authorization entry with Privy; the API sends the signed invocation and Truway's submitter account pays the fee through RPC. Each organization has its own budget-treasury instance, deployed from WASM 0.4.0 by a single-use account; the WASM is attested in a GitHub release read by Stellar Expert and Stellar Lab. Contracts emit Proof of Spend events to the ledger, read by the indexer and any reader. Coming soon: USDC to the Stellar Disbursement Platform, an anchor to pesos and a shared document registry."><figcaption><p>Stellar architecture: contracts, accounts and integrations</p></figcaption></figure>
 
 ## Public money in pesos
 

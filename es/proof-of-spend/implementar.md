@@ -1,4 +1,5 @@
 ---
+icon: code
 description: "Lista de conformidad para implementar Proof of Spend en otro contrato o sistema."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

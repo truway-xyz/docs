@@ -1,4 +1,5 @@
 ---
+icon: book
 description: "How each budget line and expense is booked in the chart of accounts."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

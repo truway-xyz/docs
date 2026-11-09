@@ -1,4 +1,5 @@
 ---
+icon: badge-check
 description: "El estándar abierto de ejecución presupuestal sobre Stellar que implementa Truway."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -31,8 +32,6 @@ Proof of Spend (`proof-of-spend/1`) es un estándar abierto de ejecución presup
 | Licencia | Apache-2.0 |
 | Implementación de referencia | [`budget-treasury`](../desarrolladores/budget-treasury.md) |
 | Fuente | [`soroban-contracts/docs/proof-of-spend.md`](https://github.com/truway-xyz/soroban-contracts/blob/main/docs/proof-of-spend.md) |
-
-<figure><img src="../.gitbook/assets/eventos-a-informes.svg" alt="Los eventos budget_set, expense_recorded, payment_executed y project_funded de budget-treasury alimentan el presupuesto y lo ejecutado por rubro y fuente, el informe por financiador y el libro diario."><figcaption><p>De los eventos a los informes</p></figcaption></figure>
 
 ## Qué cubre
 

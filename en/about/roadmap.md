@@ -1,4 +1,5 @@
 ---
+icon: map
 description: "What is coming to Truway."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

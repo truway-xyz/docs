@@ -1,4 +1,5 @@
 ---
+icon: terminal
 description: "Verifica un registro directamente en el ledger con la CLI de Stellar."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Verificar un registro
 
 Esta guía verifica un registro sin pasar por Truway. Para la verificación desde el navegador, ver [Verificar un gasto](../guias/verificar-un-gasto.md).
-
-<figure><img src="../.gitbook/assets/verificar-registro.svg" alt="Se revisa la metadata del contrato, el hash del WASM contra el release, el evento con getEvents, la huella del soporte contra receipt_hash, receipt_use y la propuesta."><figcaption><p>Pasos de la verificación</p></figcaption></figure>
 
 ## 1. El contrato
 

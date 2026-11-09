@@ -1,4 +1,5 @@
 ---
+icon: diagram-project
 description: "El recorrido de un contrato en Truway, del presupuesto al informe."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -21,8 +22,6 @@ layout:
 # Cómo funciona
 
 Un programa en Truway corresponde a un contrato o convenio. El dinero se reparte en rubros, cada movimiento lo aprueba una segunda persona y todo queda en el registro público.
-
-<figure><img src="../.gitbook/assets/como-funciona.svg" alt="Contrato, rubros con cuenta contable, aprobación, anticipo al equipo, aprobación, compra en campo con recibo por WhatsApp, gasto propuesto, aprobación, registro público e informe."><figcaption><p>Recorrido de un programa</p></figcaption></figure>
 
 ## 1. Presupuesto
 

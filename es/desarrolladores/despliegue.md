@@ -1,4 +1,5 @@
 ---
+icon: server
 description: "Dónde corre cada parte de Truway y las instancias del contrato."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
@@ -20,7 +21,7 @@ layout:
 
 # Despliegue
 
-<figure><img src="../.gitbook/assets/despliegue.svg" alt="El DNS de Cloudflare dirige el sitio web a Cloudflare Pages, la app a su servidor Next.js y la API a su servidor NestJS; la API usa PostgreSQL, Redis y almacenamiento de objetos administrados, Google Gemini y los webhooks de WhatsApp, y se conecta al RPC de Stellar."><figcaption><p>Despliegue de la plataforma</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/despliegue.png" alt="Diagrama de despliegue UML. Los dispositivos de las personas pasan por el DNS de Cloudflare al sitio web en Cloudflare Pages, al servidor de la app Next.js y al servidor de la API NestJS. La API usa PostgreSQL, Redis y almacenamiento de objetos administrados, Google Gemini y los webhooks de WhatsApp, y se conecta al RPC de Stellar testnet, que invoca budget-treasury y el contrato de USDC."><figcaption><p>Diagrama de despliegue (UML)</p></figcaption></figure>
 
 | Servicio | Dirección |
 |---|---|

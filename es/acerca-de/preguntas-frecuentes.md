@@ -1,4 +1,5 @@
 ---
+icon: circle-question
 description: "Respuestas cortas a las preguntas más comunes."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

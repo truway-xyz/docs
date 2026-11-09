@@ -1,4 +1,5 @@
 ---
+icon: bolt
 description: "Los eventos de Proof of Spend y cómo se indexan."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

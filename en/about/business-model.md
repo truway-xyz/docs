@@ -1,4 +1,5 @@
 ---
+icon: briefcase
 description: "What is open, who the customer is and how Truway grows."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0

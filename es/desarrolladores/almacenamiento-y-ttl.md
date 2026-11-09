@@ -1,4 +1,5 @@
 ---
+icon: database
 description: "Política de TTL, archivo y restauración de las entradas del contrato."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
