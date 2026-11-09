@@ -1,27 +1,68 @@
-# Leer el registro
+---
+description: "Arma el informe de ejecución y el libro diario a partir de los eventos."
+cover: ../.gitbook/assets/velo-truway.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-Cómo convertir los eventos de Proof of Spend en los dos documentos que piden financiadores y
-auditores. La versión completa, con ejemplos, está en inglés: [Reading the record](https://github.com/truway-xyz/docs/blob/main/en/proof-of-spend/reading-the-record.md).
+# Leer el registro
 
 ## Informe de ejecución presupuestal
 
-Para un proyecto y un periodo: el último `budget_set` por `(rubro, fuente)` da el **presupuesto**;
-la suma de `expense_recorded.amount` y `payment_executed.amount` por `(rubro, fuente)` da lo
-**ejecutado**; la diferencia es lo **disponible**. Agrupar por fuente da el informe de cada
-financiador.
+Para un proyecto y un periodo:
+
+1. El último `budget_set` por `(line, source)` da el **presupuesto**.
+2. La suma de `expense_recorded.amount` y `payment_executed.amount` por `(line, source)` da lo **ejecutado**.
+3. `presupuesto − ejecutado` es lo **disponible**.
+4. Agrupar por `source` da el informe de cada financiador.
+
+Cada gasto trae también `line_paid` y `line_budget`, para revisar los acumulados sin recorrer toda la historia.
+
+| Rubro | Cuenta | Fuente | Presupuesto | Ejecutado | Disponible |
+|---|---|---|---:|---:|---:|
+| Matrícula | CO_PUC 5135 | Fondo departamental | 500.000 | 0 | 500.000 |
+| Transporte | CO_PUC 5155 | Fondo departamental | 200.000 | 62.000 | 138.000 |
+| Materiales de estudio | CO_PUC 5195 | Aliado corporativo | 500.000 | 38.500 | 461.500 |
+
+*Datos de demostración en COP.*
 
 ## Libro diario
 
-Cada `expense_recorded` y `payment_executed` es un asiento: débito a `account` en `chart`, crédito a
-la cuenta de donde salió el dinero (caja, bancos o el activo de la tesorería), con `receipt_hash`
-como soporte. La API pública de Truway lo entrega en CSV:
-`GET https://api.truway.xyz/public/proof/programs/<id>/ledger?format=csv`.
+Cada `expense_recorded` y `payment_executed` es un asiento:
+
+* **Débito:** `account` en `chart`.
+* **Crédito:** la cuenta de donde salió el dinero (caja, bancos o el activo de la tesorería).
+* **Soporte:** `receipt_hash`.
+
+Cada `project_funded` debita el activo de la tesorería y acredita la cuenta de pasivo o ingreso que defina la organización.
+
+La API pública de Truway lo entrega listo:
+
+```bash
+curl "https://api.truway.xyz/public/proof/programs/<id>/ledger?format=csv"
+```
 
 ## Valores
 
-Punto fijo con **7 decimales** en la moneda del rubro: `450000000000` son 45.000,00 COP.
+Punto fijo con **7 decimales** en la moneda del rubro. `450000000000` son 45.000,00 COP.
+
+## Identificadores
+
+Proyectos, rubros, fuentes, proveedores y referencias de pago van como SHA-256 de un identificador que elige la organización, nunca el identificador en claro.
 
 ## Historia
 
-Los proveedores de RPC guardan los eventos unos 7 días. Para periodos más largos hay que leer de un
-indexador: ver [Eventos e indexación](../arquitectura/eventos-e-indexacion.md).
+Los proveedores de RPC guardan eventos unos 7 días. Para periodos más largos, lee de un indexador. Ver [Eventos e indexación](../desarrolladores/eventos-e-indexacion.md).

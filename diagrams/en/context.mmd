@@ -1,0 +1,33 @@
+flowchart LR
+  subgraph P[People]
+    SUP[Supervisor<br/>government agency]:::people
+    COO[Coordinator<br/>executing organisation]:::people
+    CAM[Field team]:::people
+    VEE[Oversight group or citizen]:::people
+  end
+  subgraph T[Truway]
+    WA[WhatsApp channel]:::truway
+    APP[Web app]:::truway
+    API[Truway API]:::truway
+    EXP[Proof of Spend<br/>Explorer]:::truway
+  end
+  subgraph S[Stellar]
+    BT[[budget-treasury<br/>one instance per organisation]]:::chain
+    LED[(Public ledger)]:::chain
+  end
+  OTH[Third-party explorers<br/>and indexers]:::ext
+  CAM -- photo of the receipt --> WA --> API
+  COO -- proposes --> APP --> API
+  SUP -- approves --> APP
+  API -- each member signs their own step --> BT
+  BT -- Proof of Spend events --> LED
+  LED -- indexer --> API --> EXP
+  VEE -- expense code --> EXP
+  LED --> OTH
+  VEE -. without Truway .-> OTH
+
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

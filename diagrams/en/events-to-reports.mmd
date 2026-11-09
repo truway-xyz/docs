@@ -1,0 +1,14 @@
+flowchart LR
+  BT[[budget-treasury]]:::chain
+  BT -- budget_set --> L[Budget<br/>per line and source]:::truway
+  BT -- expense_recorded<br/>payment_executed --> G[Spent<br/>per line and source]:::truway
+  L --> R[Execution report<br/>per funder]:::people
+  G --> R
+  BT -- expense_recorded<br/>payment_executed --> J[General ledger<br/>debit the line's account]:::people
+  BT -- project_funded --> J
+
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

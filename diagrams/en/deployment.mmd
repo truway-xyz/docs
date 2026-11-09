@@ -1,0 +1,42 @@
+flowchart LR
+  U[People<br/>browser and WhatsApp]:::people
+  subgraph CF[Cloudflare]
+    DNS[truway.xyz DNS]:::ext
+    LAND[Website<br/>Cloudflare Pages]:::ext
+  end
+  subgraph NUBE[Cloud provider]
+    FE[App server<br/>Next.js]:::truway
+    BE[API server<br/>NestJS and workers]:::truway
+  end
+  subgraph DATOS[Managed services]
+    PG[(PostgreSQL)]:::ext
+    RD[(Redis)]:::ext
+    ST[(Object<br/>storage)]:::ext
+  end
+  subgraph EXT[External services]
+    PRIVY[Privy<br/>sign-in]:::ext
+    GEM[Google Gemini]:::ext
+    META[WhatsApp Cloud API]:::ext
+  end
+  subgraph STE[Stellar]
+    RPC[RPC]:::chain
+    BT[[budget-treasury]]:::chain
+  end
+  U --> DNS
+  DNS --> LAND
+  DNS -- app.truway.xyz --> FE
+  DNS -- api.truway.xyz --> BE
+  FE --> BE
+  FE --> PRIVY
+  BE --> PG
+  BE --> RD
+  BE --> ST
+  BE --> GEM
+  META -- webhooks --> BE
+  BE --> RPC --> BT
+
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

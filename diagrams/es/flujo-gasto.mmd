@@ -1,0 +1,23 @@
+sequenceDiagram
+  autonumber
+  actor Campo as Líder del equipo
+  participant WA as WhatsApp
+  participant API as API de Truway
+  participant BT as budget-treasury
+  actor Apr as Aprobador
+  participant IDX as Indexador
+  Campo->>WA: Foto del recibo
+  WA->>API: Webhook con la imagen
+  API->>API: Guarda el archivo y calcula SHA-256
+  API->>API: La IA lee valor, proveedor, fecha y NIT
+  API-->>Campo: ¿A qué rubro pertenece?
+  Campo->>WA: Número del rubro
+  API->>BT: propose(RecordExpense) firmado por la líder
+  Note over API,BT: En testnet firma un firmante de demostración
+  BT-->>API: proposal_created
+  Apr->>API: Aprobar
+  API->>BT: approve(id) firmado por el aprobador
+  Note over BT: Revisa rol, rubro, saldo<br/>y que el soporte no se haya usado
+  BT-->>API: expense_recorded y proposal_executed
+  IDX->>BT: getEvents cada 15 s
+  IDX->>API: Guarda los eventos

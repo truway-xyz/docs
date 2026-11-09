@@ -32,7 +32,7 @@ TABLE="$(mktemp)"
   echo "_Generated from \`deployments/\` at soroban-contracts commit \`$COMMIT\`._"
 } > "$TABLE"
 
-for page in en/architecture/deployments.md es/arquitectura/despliegues.md; do
+for page in en/developers/deployment.md es/desarrolladores/despliegue.md; do
   [ -f "$page" ] || { echo "skip $page (missing)"; continue; }
   awk -v table="$TABLE" '
     /<!-- GENERATED:deployments:start -->/ { print; while ((getline line < table) > 0) print line; skip=1; next }

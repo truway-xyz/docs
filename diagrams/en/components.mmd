@@ -1,0 +1,41 @@
+flowchart TB
+  WEB[Web app · Next.js 16]:::truway
+  WAP[WhatsApp Cloud API]:::ext
+  subgraph A[Truway API · NestJS 11]
+    AUTH[Identity and permissions<br/>Privy and roles]:::truway
+    PROG[Programmes<br/>and budget]:::truway
+    CAP[Invoice capture<br/>read by Gemini]:::truway
+    TRE[Treasury<br/>proposals and approvals]:::truway
+    PUB[Public API<br/>/public/proof]:::truway
+    IDX[Indexer<br/>every 15 s]:::truway
+  end
+  subgraph DT[Data]
+    DB[(PostgreSQL)]:::ext
+    RQ[(Redis · queues)]:::ext
+    OBJ[(Supporting documents)]:::ext
+  end
+  subgraph SX[Stellar]
+    RPC[RPC]:::chain
+    BT[[budget-treasury]]:::chain
+    SAC[[USDC · SAC]]:::chain
+  end
+  WEB --> AUTH
+  WEB --> PROG
+  WEB --> PUB
+  WAP --> CAP
+  CAP --> TRE
+  PROG --> TRE
+  CAP --> OBJ
+  PROG --> DB
+  PUB --> DB
+  IDX --> DB
+  IDX --> RQ
+  TRE --> RPC
+  IDX --> RPC
+  RPC --> BT
+  BT -. fund and Pay .-> SAC
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

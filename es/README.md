@@ -1,32 +1,37 @@
-# Truway Docs
+---
+description: "Documentación de Truway para organizaciones, entidades públicas y desarrolladores."
+cover: .gitbook/assets/velo-truway.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-Truway convierte un contrato público en un expediente que cualquiera puede comprobar: cada factura,
-quién la propuso, quién la aprobó y cuánto queda del rubro, a la vista de cualquier veedor y sin
-poder borrarse en silencio.
+# Bienvenido a Truway
 
-## Empieza por donde estás
+Truway lleva la ejecución de un contrato público a un registro que cualquiera puede consultar. Cada gasto queda con su rubro, su cuenta contable, su factura y la aprobación de dos personas.
 
-| Eres | Empieza aquí |
-|---|---|
-| Una **entidad pública** o el **supervisor** de un contrato | [Para la entidad y el supervisor](sector-publico/entidad-y-supervisor.md) |
-| Una **organización que ejecuta dinero público** (ESAL, federación, operador) | [Para el ejecutor](sector-publico/ejecutor.md) |
-| Una **veeduría**, un concejal, una contraloría o un ciudadano | [Para el veedor y el ciudadano](sector-publico/veedor-y-ciudadano.md) |
-| Un **revisor técnico** (financiador, panel, auditor) | [Modelo de confianza](arquitectura/modelo-de-confianza.md) y [Verifícalo tú mismo](arquitectura/verificalo.md) |
-| Un **desarrollador** que quiere implementar o leer el estándar | [Qué es Proof of Spend](proof-of-spend/README.md) |
+{% hint style="info" %}
+Truway está en beta. La app funciona en un entorno de pruebas y los programas que verás son de demostración.
+{% endhint %}
 
-## Qué es real hoy
+<figure><img src=".gitbook/assets/como-funciona.svg" alt="Un contrato se divide en rubros con cuenta contable. Cada anticipo y cada gasto los aprueba una segunda persona y quedan en el registro público, de donde salen el informe por rubro y el libro diario."><figcaption><p>Del contrato al informe, con dos aprobaciones en cada paso</p></figcaption></figure>
 
-Todo corre en la red de pruebas (**testnet**) de Stellar con datos de demostración. Nada está en la
-red principal. Cada página dice si lo que describe está *En testnet*, *Construido, sin desplegar*,
-*En diseño* o *En la hoja de ruta*. El panorama completo está en [Estado actual](conoce-truway/estado-actual.md).
+## Empieza aquí
 
-## Las partes de esta documentación
+<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Qué es Truway</strong></td><td>Para quién es y qué resuelve.</td><td><a href="primeros-pasos/que-es-truway.md">que-es-truway.md</a></td></tr><tr><td><strong>Guía rápida</strong></td><td>Tu primer gasto registrado y verificable.</td><td><a href="primeros-pasos/guia-rapida.md">guia-rapida.md</a></td></tr><tr><td><strong>Para entidades públicas</strong></td><td>Supervisión, integraciones y piloto.</td><td><a href="sector-publico/truway-para-entidades.md">truway-para-entidades.md</a></td></tr><tr><td><strong>Verificar un gasto</strong></td><td>Sin cuenta y sin pedir permiso.</td><td><a href="guias/verificar-un-gasto.md">verificar-un-gasto.md</a></td></tr><tr><td><strong>Proof of Spend</strong></td><td>El estándar abierto detrás de cada registro.</td><td><a href="proof-of-spend/README.md">README.md</a></td></tr><tr><td><strong>Desarrolladores</strong></td><td>Arquitectura, contrato y Stellar.</td><td><a href="desarrolladores/arquitectura.md">arquitectura.md</a></td></tr></tbody></table>
 
-- **Conoce Truway:** qué hace, para quién, cómo se sostiene y hacia dónde va.
-- **Sector público:** cómo funciona un expediente, paso a paso, sin vocabulario técnico.
-- **Proof of Spend:** el estándar abierto de ejecución presupuestal que Truway implementa.
-- **Arquitectura y Stellar:** contratos, firmas, eventos, verificación y seguridad. Por ahora el
-  detalle completo está en inglés; cada página trae un resumen en español.
+## Enlaces
 
-Esta documentación es abierta, con licencia [CC BY 4.0](https://github.com/truway-xyz/docs/blob/main/LICENSE).
-¿Viste un error? [Abre un issue o un pull request](https://github.com/truway-xyz/docs).
+<a href="https://app.truway.xyz" class="button primary">Abrir la app</a> <a href="https://app.truway.xyz/proof" class="button secondary">Verificar un gasto</a> <a href="https://github.com/truway-xyz/soroban-contracts" class="button secondary">Ver el código</a>

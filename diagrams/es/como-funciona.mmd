@@ -1,0 +1,16 @@
+flowchart LR
+  A[Contrato<br/>o convenio]:::people --> B[Rubros con<br/>cuenta contable]:::truway
+  B --> C{Otra persona<br/>aprueba}
+  C --> D[Anticipo<br/>al equipo]:::truway
+  D --> E{Otra persona<br/>aprueba}
+  E --> F[Compra en campo<br/>recibo por WhatsApp]:::people
+  F --> G[Gasto propuesto<br/>en su rubro]:::truway
+  G --> H{Otra persona<br/>aprueba}
+  H --> I[Registro público<br/>con su código]:::chain
+  I --> J[Informe por rubro<br/>y libro diario]:::truway
+
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

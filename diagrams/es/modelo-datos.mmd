@@ -1,0 +1,40 @@
+classDiagram
+  direction LR
+  class Treasury {
+    +Address token
+    +Symbol token_symbol
+    +Map members
+    +u64 next_id
+  }
+  class BudgetLine {
+    +BytesN32 project
+    +BytesN32 line
+    +BytesN32 source
+    +Symbol chart
+    +Symbol account
+    +Symbol currency
+    +i128 budget
+    +i128 paid
+  }
+  class Funds {
+    +BytesN32 project
+    +BytesN32 source
+    +i128 amount
+  }
+  class Proposal {
+    +u64 id
+    +Address proposer
+    +Action action
+    +ProposalStatus status
+    +Address decided_by
+    +u64 created_at
+    +u64 decided_at
+  }
+  class Receipt {
+    +BytesN32 receipt_hash
+    +u64 proposal_id
+  }
+  Treasury "1" --> "*" BudgetLine
+  Treasury "1" --> "*" Funds
+  Treasury "1" --> "*" Proposal
+  Proposal "1" --> "0..1" Receipt : usa

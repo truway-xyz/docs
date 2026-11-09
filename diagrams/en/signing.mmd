@@ -1,0 +1,19 @@
+sequenceDiagram
+  autonumber
+  actor M as Member in their browser
+  participant P as Privy
+  participant API as Truway API
+  participant RPC as Stellar RPC
+  M->>API: Approve
+  API->>RPC: simulateTransaction(approve)
+  RPC-->>API: Member's authorisation entry
+  API->>API: Sets nonce and expiry of about 720 ledgers
+  API-->>M: Hash to sign
+  M->>P: signRawHash
+  P-->>M: Signature
+  M->>API: Signature
+  API->>API: Checks the signature against the member's address
+  API->>RPC: Simulates again and submits
+  Note over API,RPC: Truway is the source and pays the fee
+  RPC-->>API: Confirmed
+  API-->>M: Registered · verifiable

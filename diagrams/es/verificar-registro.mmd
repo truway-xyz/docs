@@ -1,0 +1,12 @@
+flowchart LR
+  M[stellar contract info meta<br/>event_schema = proof-of-spend/1]:::truway --> W[Hash del WASM<br/>contra el release atestado]:::truway
+  W --> EV[getEvents<br/>expense_recorded]:::chain
+  EV --> H[shasum -a 256<br/>contra receipt_hash]:::truway
+  H --> R[receipt_use<br/>un solo registro]:::chain
+  R --> P[proposal id<br/>proponente distinto del aprobador]:::chain
+
+classDef chain fill:#1E42D8,stroke:#0B1F77,color:#FFFFFF
+classDef ext fill:#F2F2F0,stroke:#8F9298,color:#272A30
+classDef people fill:#FAF5E8,stroke:#C7A667,color:#332602
+classDef soon fill:#FFFFFF,stroke:#8F9298,stroke-dasharray:5 4,color:#585B62
+classDef truway fill:#F0F4FF,stroke:#243CA6,color:#111318

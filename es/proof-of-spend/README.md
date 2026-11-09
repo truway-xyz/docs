@@ -1,56 +1,69 @@
-# Qué es Proof of Spend
+---
+description: "El estándar abierto de ejecución presupuestal sobre Stellar que implementa Truway."
+cover: ../.gitbook/assets/velo-truway.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Proof of Spend
 
 **Un pago prueba que el dinero se movió. Proof of Spend prueba qué compró.**
 
-Proof of Spend (`proof-of-spend/1`) es un estándar abierto de ejecución presupuestal sobre Stellar.
-Un contrato que lo sigue registra, en cada gasto o pago: contra qué rubro aprobado, de qué
-financiador, en qué cuenta contable, con qué soporte y quién lo aprobó. Cualquiera puede rehacer el
-informe de ejecución presupuestal o el libro diario a partir de sus eventos, sin entrar a la base de
-datos de la organización ni depender de su proveedor de software.
+Proof of Spend (`proof-of-spend/1`) es un estándar abierto de ejecución presupuestal sobre Stellar. Un contrato que lo implementa registra, por cada gasto o pago, contra qué rubro, de qué financiador, en qué cuenta contable, con qué soporte y quién lo aprobó.
 
 | | |
 |---|---|
 | Identificador | `proof-of-spend/1` |
-| Estado | Borrador 2, 2026-11-07 |
+| Versión | Borrador 2, 2026-11-07 |
 | Licencia | Apache-2.0 |
-| Implementación de referencia | [`budget-treasury`](../arquitectura/budget-treasury.md) |
+| Implementación de referencia | [`budget-treasury`](../desarrolladores/budget-treasury.md) |
 | Fuente | [`soroban-contracts/docs/proof-of-spend.md`](https://github.com/truway-xyz/soroban-contracts/blob/main/docs/proof-of-spend.md) |
 
-## Por qué un estándar y no otra plataforma
-
-Los presupuestos públicos y las donaciones con destino específico los ejecutan muchas
-organizaciones en muchos sistemas. Financiadores, auditores, entes de control y ciudadanos no
-pueden comparar ni verificar la ejecución sin preguntarle a cada sistema. La interoperabilidad
-empieza por un formato común y público. Proof of Spend es ese formato para el paso de la ejecución.
+<figure><img src="../.gitbook/assets/eventos-a-informes.svg" alt="Los eventos budget_set, expense_recorded, payment_executed y project_funded de budget-treasury alimentan el presupuesto y lo ejecutado por rubro y fuente, el informe por financiador y el libro diario."><figcaption><p>De los eventos a los informes</p></figcaption></figure>
 
 ## Qué cubre
 
-**Cubre:** rubros por proyecto y fuente de financiación, cada uno con cuenta contable y moneda;
-gastos pagados fuera de la red y pagos hechos en ella, cada uno con su cuenta y la huella de su
-soporte; la aprobación de dos personas detrás de cada cambio; el dinero en la red, separado por
-fuente.
+* Rubros por proyecto y fuente de financiación, con cuenta contable y moneda.
+* Gastos pagados fuera de la red y pagos hechos en ella, con su cuenta y la huella de su soporte.
+* La aprobación de dos personas detrás de cada cambio.
+* El dinero en la red, separado por fuente.
 
-**Todavía no cubre:** la contratación, los pagos a beneficiarios individuales (necesitan
-divulgación selectiva), los hitos y el impacto.
+Todavía no cubre la contratación, los pagos a beneficiarios individuales ni los hitos de impacto.
 
-## Cómo lo declara un contrato
+## Conformidad
 
-1. Declara en su metadata `event_schema = proof-of-spend/1` (sección `contractmetav0` del Wasm).
-2. Emite los eventos del estándar con sus nombres, temas y campos exactos.
-3. Hace cumplir todas las invariantes del estándar.
+Un contrato cumple `proof-of-spend/1` cuando:
 
-Los lectores ignoran los eventos de contratos que no declaran la metadata.
+1. declara `event_schema = proof-of-spend/1` en su metadata (`contractmetav0`);
+2. emite los eventos del estándar con sus nombres, temas y campos exactos;
+3. hace cumplir todas sus invariantes.
 
-## Las invariantes, en palabras simples
+## Invariantes
 
-1. Cada cambio de presupuesto, gasto y pago lo propuso un miembro y lo aprobó otro.
+1. Cada cambio de presupuesto, gasto y pago lo propone un miembro y lo aprueba otro.
 2. Los cambios de miembros y de código los aprueba un administrador.
-3. Ningún rubro gasta nunca más que su presupuesto.
-4. Un gasto se carga a un solo rubro, así que el dinero de un financiador nunca paga el rubro de otro.
+3. Ningún rubro gasta más que su presupuesto.
+4. Cada gasto se carga a un solo rubro.
 5. Todo gasto lleva soporte, y un soporte respalda como máximo un gasto por contrato.
 6. Todo gasto se asienta en el plan de cuentas de su rubro.
 7. La tesorería siempre conserva miembros suficientes para aprobar.
 8. Todo valor es positivo.
 
-Sigue con: [Especificación](especificacion.md) · [Leer el registro](leer-el-registro.md) ·
-[Implementar el estándar](implementar.md).
+## Siguiente
+
+* [Especificación](especificacion.md)
+* [Leer el registro](leer-el-registro.md)
+* [Implementar el estándar](implementar.md)
