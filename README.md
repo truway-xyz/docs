@@ -1,6 +1,7 @@
 # Truway Docs
 
-Source of the public documentation of [Truway](https://truway.xyz), published with GitBook.
+Source of the public documentation of [Truway](https://truway.xyz), published with GitBook at
+**[truway.gitbook.io/docs](https://truway.gitbook.io/docs)**.
 GitBook syncs from this repository through Git Sync: what is merged into `main`
 is what the site shows.
 
