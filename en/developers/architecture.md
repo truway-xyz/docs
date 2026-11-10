@@ -1,12 +1,14 @@
 ---
+description: Truway's components, who controls each one and what lives on the ledger.
 icon: sitemap
-description: "Truway's components, who controls each one and what lives on the ledger."
 cover: ../.gitbook/assets/velo-truway.png
 coverY: 0
 layout:
+  width: default
   cover:
     visible: true
     size: full
+    mask: none
   title:
     visible: true
   description:
@@ -17,15 +19,19 @@ layout:
     visible: true
   pagination:
     visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
 ---
 
 # Architecture
 
 Members of each organization propose and approve in their own `budget-treasury` contract on Stellar. The Truway platform builds those transactions, stores documents and indexes events. Anyone can read the result.
-
-Open source under Apache-2.0. The repository holds `budget-treasury`, the reference implementation of Proof of Spend.
-
-<a href="https://github.com/truway-xyz/soroban-contracts" class="button primary">View the contracts on GitHub</a>
 
 ## Context
 
@@ -35,26 +41,26 @@ Open source under Apache-2.0. The repository holds `budget-treasury`, the refere
 
 <figure><img src="../.gitbook/assets/components.png" alt="UML component diagram. The web app has the dashboard, the public explorer and the Privy signer. The API has identity, programs, public proof, document storage, WhatsApp capture, invoice reading with Gemini, treasury, Soroban client and indexer. The Soroban client uses the bindings to reach Stellar RPC and budget-treasury; data goes to PostgreSQL, Redis and object storage."><figcaption><p>Components (UML)</p></figcaption></figure>
 
-| Layer | What it does | Who controls it |
-|---|---|---|
-| **Members** (admins, approvers, operators) | Propose and approve, each with their own key | The organization |
-| **Web app and WhatsApp channel** | Capture invoices, show budgets and request approvals | Truway |
-| **Truway API** | Builds each transaction for the member who must sign it, stores documents and their SHA-256, indexes events | Truway |
-| **`budget-treasury`** | Enforces the rules: two signers, budget limits, single-use documents, account codes | Its members; Truway deploys it but is never a member |
-| **Proof of Spend events** | The public interface | Nobody: they are on the ledger |
+| Layer                                      | What it does                                                                                                | Who controls it                                      |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Members** (admins, approvers, operators) | Propose and approve, each with their own key                                                                | The organization                                     |
+| **Web app and WhatsApp channel**           | Capture invoices, show budgets and request approvals                                                        | Truway                                               |
+| **Truway API**                             | Builds each transaction for the member who must sign it, stores documents and their SHA-256, indexes events | Truway                                               |
+| **`budget-treasury`**                      | Enforces the rules: two signers, budget limits, single-use documents, account codes                         | Its members; Truway deploys it but is never a member |
+| **Proof of Spend events**                  | The public interface                                                                                        | Nobody: they are on the ledger                       |
 
 `RecordExpense` records an expense paid by bank or cash and moves no funds. `Pay` pays from funds held in the contract.
 
 ## What lives on the ledger and what lives off it
 
-| Data | Where | Form |
-|---|---|---|
-| Budget per line and source, with chart, account and currency | Ledger | Amounts and codes; identifiers as SHA-256 |
-| Expense: amount, line, account, proposer, approver | Ledger | Addresses and amounts |
-| Supporting document fingerprint | Ledger | SHA-256 of the file |
-| Supporting document file | Truway's private storage | File |
-| Supplier tax ID | Truway's database; on the ledger as `payee_ref` | SHA-256 |
-| Names of people, projects and suppliers | Truway's database | Text |
+| Data                                                         | Where                                           | Form                                      |
+| ------------------------------------------------------------ | ----------------------------------------------- | ----------------------------------------- |
+| Budget per line and source, with chart, account and currency | Ledger                                          | Amounts and codes; identifiers as SHA-256 |
+| Expense: amount, line, account, proposer, approver           | Ledger                                          | Addresses and amounts                     |
+| Supporting document fingerprint                              | Ledger                                          | SHA-256 of the file                       |
+| Supporting document file                                     | Truway's private storage                        | File                                      |
+| Supplier tax ID                                              | Truway's database; on the ledger as `payee_ref` | SHA-256                                   |
+| Names of people, projects and suppliers                      | Truway's database                               | Text                                      |
 
 Events never carry personal data.
 
