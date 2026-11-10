@@ -33,6 +33,10 @@ layout:
 
 Los miembros de cada organización proponen y aprueban en su propio contrato `budget-treasury` en Stellar. La plataforma de Truway arma esas transacciones, guarda los documentos e indexa los eventos. Cualquiera puede leer el resultado.
 
+Código abierto bajo Apache-2.0. El repositorio contiene `budget-treasury`, la implementación de referencia de Proof of Spend.
+
+<a href="https://github.com/truway-xyz/soroban-contracts" class="button primary">Ver los contratos en GitHub</a>
+
 ## Contexto
 
 <figure><img src="../.gitbook/assets/c4-contexto.png" alt="Diagrama de contexto C4. Supervisor, coordinación, equipo de campo y veedor usan Truway. Truway envía propuestas y aprobaciones firmadas a Stellar y lee sus eventos, recibe mensajes de WhatsApp Business, usa Privy para la sesión y la firma, Google Gemini para leer facturas, y leerá contratos de SECOP II."><figcaption><p>Contexto del sistema (C4, nivel 1)</p></figcaption></figure>
